@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  factual_id: MyString
+  name: MyString
+  address: MyText
+  locallity: MyString
+  region: MyString
+  post_code: MyString
+  country: MyString
+  telephone: MyString
+  website: MyString
+  latitude: 1.5
+  longitude: 1.5
+  hours_of_operations: MyString
+  category_labels: MyString
+  chain_name: MyString
+
+two:
+  factual_id: MyString
+  name: MyString
+  address: MyText
+  locallity: MyString
+  region: MyString
+  post_code: MyString
+  country: MyString
+  telephone: MyString
+  website: MyString
+  latitude: 1.5
+  longitude: 1.5
+  hours_of_operations: MyString
+  category_labels: MyString
+  chain_name: MyString
