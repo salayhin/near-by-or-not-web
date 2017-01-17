@@ -4,7 +4,7 @@ one:
   factual_id: MyString
   name: MyString
   address: MyText
-  locallity: MyString
+  locality: MyString
   region: MyString
   post_code: MyString
   country: MyString
@@ -20,7 +20,7 @@ two:
   factual_id: MyString
   name: MyString
   address: MyText
-  locallity: MyString
+  locality: MyString
   region: MyString
   post_code: MyString
   country: MyString

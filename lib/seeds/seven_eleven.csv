@@ -1,0 +1,61 @@
+post_code,category_labels,address,name,website,tel,factual_id,longitude,latitude,chain_name,locality,region,country
+19040,"Retail, Convenience Stores",317 W County Line Rd,7-Eleven,http://www.7-eleven.com/,(215) 674-5299,a32b8152-6eb8-463f-8ba7-9ba588639903,-75.119031,40.199021,7-Eleven,Hatboro,PA,us
+33838,"Retail, Convenience Stores",28200 Hwy 27,7-Eleven,http://www.7-eleven.com/,(863) 439-4945,6f4f4aea-c963-449b-80ea-caa4af054360,-81.633198,28.018299,7-Eleven,Dundee,FL,us
+32810,"Retail, Convenience Stores",5570 N Orange Blossom Trl,7-Eleven,http://www.7-eleven.com/,(407) 298-8460,012a17e3-6a23-4161-88d7-064a4ad6ab39,-81.426786,28.608341,7-Eleven,Orlando,FL,us
+34653,"Retail, Convenience Stores",7320 State Road 54,7-Eleven,http://www.7-eleven.com/,(727) 372-5021,07219974-e033-4922-a6d5-dd5a71838d93,-82.693217,28.216364,7-Eleven,New Port Richey,FL,us
+33764,"Retail, Convenience Stores",20073 US Highway 19 N,7-Eleven,http://www.7-eleven.com/,(727) 791-6321,098ab94a-63fe-4689-9e13-9b3d1bbfbbff,-82.729155,27.954844,7-Eleven,Clearwater,FL,us
+89015,"Retail, Convenience Stores",84 W Pacific Ave,7-Eleven,http://www.7-eleven.com/,(702) 564-2823,152c8db7-9680-4101-b52a-00074043caf3,-114.986957,36.031984,7-Eleven,Henderson,NV,us
+32920,"Retail, Convenience Stores",6770 N Atlantic Ave,7-Eleven,http://www.7-eleven.com/,(321) 784-6050,210fc41b-1037-4eee-9212-ef0931d47950,-80.605066,28.378653,7-Eleven,Cape Canaveral,FL,us
+1821,"Retail, Convenience Stores",826 Boston Rd,7-Eleven,http://www.7-eleven.com/,(978) 667-8756,39c976bc-23d9-4319-a828-c97508e335ba,-71.228972,42.531536,7-Eleven,Billerica,MA,us
+24503,"Retail, Convenience Stores",2311 Bedford Ave,7-Eleven,http://www.7-eleven.com/,(434) 845-8657,35ecebfe-43a6-4f1e-9c5a-148627fe7340,-79.168061,37.434676,7-Eleven,Lynchburg,VA,us
+20170,"Retail, Convenience Stores",13190 Parcher Ave,7-Eleven,http://www.7-eleven.com/,(703) 689-3602,02a8c6d4-b92a-4482-bf82-72ff0bac0134,-77.402777,38.960335,7-Eleven,Herndon,VA,us
+25177,"Retail, Convenience Stores",301 W Main St,7-Eleven,http://www.7-eleven.com/,(304) 727-1280,15328b99-0339-481c-a9cf-5f51a2779179,-81.846583,38.389528,7-Eleven,Saint Albans,WV,us
+7463,"Retail, Convenience Stores",220 Wyckoff Ave,7-Eleven,http://www.7-eleven.com/,(201) 444-6494,18c5a742-6d03-4b99-b1ee-9be9a9834072,-74.139018,41.011779,7-Eleven,Waldwick,NJ,us
+32792,"Retail, Convenience Stores",6305 University Blvd,7-Eleven,http://www.7-eleven.com/,(407) 678-7118,1f3eacc2-6d36-4e41-893c-6a396e65880e,-81.298517,28.598177,7-Eleven,Winter Park,FL,us
+21236,"Retail, Convenience Stores",8002 Belair Rd,7-Eleven,http://www.7-eleven.com/,(410) 661-2555,411e30cd-17d4-44d5-9145-19738ff26560,-76.50814,39.375393,7-Eleven,Baltimore,MD,us
+23451,"Retail, Convenience Stores",2256 Red Tide Rd,7-Eleven,http://www.7-eleven.com/,(757) 496-0947,1740ff3a-db10-4d1f-ba90-63ef9a6d6d03,-76.073122,36.910554,7-Eleven,Virginia Beach,VA,us
+94523,"Retail, Convenience Stores",2396 Pleasant Hill Rd,7-Eleven,http://www.7-eleven.com/,(925) 934-1550,1d3c86b8-b3b6-4866-a685-4fbc1760a09c,-122.082025,37.947512,7-Eleven,Pleasant Hill,CA,us
+85023,"Retail, Convenience Stores",2424 W Greenway Rd,7-Eleven,http://www.7-eleven.com/,(602) 993-1980,959dfe83-fb0e-4878-8d5c-f302a7607579,-112.112694,33.625704,7-Eleven,Phoenix,AZ,us
+98512,"Retail, Convenience Stores",1022 Crosby Blvd SW,7-Eleven,http://www.7-eleven.com/,(360) 570-0079,3d82b7e0-ee83-452d-ae9a-de22ca87f68d,-122.922204,47.023804,7-Eleven,Tumwater,WA,us
+7090,"Retail, Convenience Stores",1200 South Ave W,7-Eleven,http://www.7-eleven.com/,(908) 232-1336,6ec5d22b-2933-4983-816a-32d3cad88c7d,-74.364542,40.646657,7-Eleven,Westfield,NJ,us
+23116,"Retail, Convenience Stores",8316 Meadowbridge Rd,7-Eleven,http://www.7-eleven.com/,(804) 730-5596,0ab7ed95-3e80-4349-b5df-be16df2b3363,-77.390346,37.624113,7-Eleven,Mechanicsville,VA,us
+22201,"Retail, Convenience Stores",2525 Lee Hwy,7-Eleven,http://www.7-eleven.com/,(703) 243-4733,1226859e-3378-4ba8-a963-5226913877e1,-77.107341,38.89717,7-Eleven,Arlington,VA,us
+19145,"Retail, Convenience Stores",2300 S Broad St,7-Eleven,http://www.7-eleven.com/,(215) 389-1157,03f614cd-542d-4d2b-9a59-495a76525367,-75.170533,39.921817,7-Eleven,Philadelphia,PA,us
+80112,"Retail, Convenience Stores",6802 S Yosemite St,7-Eleven,http://www.7-eleven.com/,(303) 741-1784,32ed4b99-d94e-43cd-b4f1-1988123a906f,-104.887624,39.592868,7-Eleven,Centennial,CO,us
+19122,"Retail, Convenience Stores",1912 Liacouras Walk,7-Eleven,http://www.7-eleven.com/,(215) 204-7799,54228e0d-4a84-4093-8cc7-34319f866025,-75.156054,39.982519,7-Eleven,Philadelphia,PA,us
+32119,"Retail, Convenience Stores",1999 S Nova Rd,7-Eleven,http://www.7-eleven.com/,(386) 760-6455,8c8d584b-e70d-487f-9014-ae968616d3e9,-81.022988,29.167006,7-Eleven,South Daytona,FL,us
+21401,"Retail, Convenience Stores",710 Bestgate Rd,7-Eleven,http://www.7-eleven.com/,(410) 266-0011,195ed8c2-53c9-4bef-aae4-6fbfa11e532a,-76.528974,38.996334,7-Eleven,Annapolis,MD,us
+23111,"Retail, Convenience Stores",6689 Cold Harbor Rd,7-Eleven,http://www.7-eleven.com/,(804) 746-5718,17c2c0b3-9f0e-4da7-8678-eb6994081996,-77.318052,37.590327,7-Eleven,Mechanicsville,VA,us
+19149,"Retail, Convenience Stores",6800 Bustleton Ave,7-Eleven,http://www.7-eleven.com/,(267) 538-2767,2787d503-d360-4e7a-87bb-087d90b705c3,-75.065638,40.040919,7-Eleven,Philadelphia,PA,us
+7733,"Retail, Convenience Stores",2145 State Route 35,7-Eleven,http://www.7-eleven.com/,(732) 264-3105,d3b1db7d-396c-4359-adb1-415215a41947,-74.159696,40.415429,7-Eleven,Holmdel,NJ,us
+11795,"Retail, Convenience Stores",174 Higbie Ln,7-Eleven,http://www.7-eleven.com/,(631) 661-9309,45b19ea8-83f4-4f13-b69d-7080e5a71114,-73.307145,40.706046,7-Eleven,West Islip,NY,us
+20165,"Retail, Convenience Stores",20955 Davenport Dr,7-Eleven,http://www.7-eleven.com/,(703) 430-1089,5b146d96-468b-4a3d-b604-32eae8711a5c,-77.410676,39.035934,7-Eleven,Sterling,VA,us
+19056,"Retail, Convenience Stores",2760 Trenton Rd,7-Eleven,http://www.7-eleven.com/,(215) 946-8017,917a1fb0-7f02-48e4-bc0b-40dc67a2fff4,-74.877463,40.167959,7-Eleven,Levittown,PA,us
+19382,"Retail, Convenience Stores",200 S High St,7-Eleven,http://www.7-eleven.com/,(610) 436-4694,7d555e80-1e18-012f-0643-0030487f54d8,-75.60281,39.957784,7-Eleven,West Chester,PA,us
+89178,"Retail, Convenience Stores",8180 Blue Diamond Rd,7-Eleven,http://www.7-eleven.com/,(702) 875-4187,0edc0c40-dcfd-4f0a-ad73-60ded43965c4,-115.269798,36.020968,7-Eleven,Las Vegas,NV,us
+21211,"Retail, Convenience Stores",211 W 28th St,7-Eleven,http://www.7-eleven.com/,(443) 835-1877,18e57d6b-b92c-40dd-849a-03179a872575,-76.620888,39.321226,7-Eleven,Baltimore,MD,us
+94108,"Retail, Convenience Stores",217 Sutter St,7-Eleven,http://www.7-eleven.com/,(415) 362-0590,26d00399-ceca-4b3b-b025-f10514cf3e49,-122.404257,37.789686,7-Eleven,San Francisco,CA,us
+7432,"Retail, Convenience Stores",118 Godwin Ave,7-Eleven,http://www.7-eleven.com/,(201) 652-0711,2149e09f-3244-4244-93a8-8287b33e8c92,-74.138686,40.986052,7-Eleven,Midland Park,NJ,us
+32905,"Retail, Convenience Stores",1199 Palm Bay Rd,7-Eleven,http://www.7-eleven.com/,(321) 952-4334,dfc6f35d-26ca-4b71-b418-01d421f3679b,-80.638607,28.035871,7-Eleven,Melbourne,FL,us
+7110,"Retail, Convenience Stores",38 Passaic Ave,7-Eleven,http://www.7-eleven.com/,(973) 235-9529,ea22210b-9e89-4f9e-a02b-c6fb6d623419,-74.158152,40.80872,7-Eleven,Nutley,NJ,us
+20166,"Retail, Convenience Stores",46141 Woodshire Dr,7-Eleven,http://www.7-eleven.com/,(571) 434-6298,089abcd4-3d3b-4ce5-a8c0-9e3d133cf7f6,-77.403724,39.025224,7-Eleven,Sterling,VA,us
+8053,"Retail, Convenience Stores",2 E Main St,7-Eleven,http://www.7-eleven.com/,(856) 596-9549,17ea2680-40a5-46ea-bcc7-f8eb0aeb53b2,-74.921838,39.891659,7-Eleven,Marlton,NJ,us
+23221,"Retail, Convenience Stores",2910 Patterson Ave,7-Eleven,http://www.7-eleven.com/,(804) 353-4377,806dc35e-0b60-4e11-b042-7812c2c7377a,-77.473918,37.560443,7-Eleven,Richmond,VA,us
+11554,"Retail, Convenience Stores",2138 Hempstead Tpke,7-Eleven,http://www.7-eleven.com/,(516) 357-2517,176721b9-7421-464f-9290-c986c7983384,-73.557487,40.724672,7-Eleven,East Meadow,NY,us
+80234,"Retail, Convenience Stores",10410 Melody Dr,7-Eleven,http://www.7-eleven.com/,(303) 252-7505,31b0d67f-ee29-4018-b911-d9f8b0dc2b2f,-104.992704,39.8858,7-Eleven,Northglenn,CO,us
+11741,"Retail, Convenience Stores",301 Union Ave,7-Eleven,http://www.7-eleven.com/,(631) 588-9392,03a9d25e-7675-4e52-8dc0-b5ca25203558,-73.081077,40.812381,7-Eleven,Holbrook,NY,us
+2116,"Retail, Convenience Stores",261 Dartmouth St,7-Eleven,http://www.7-eleven.com/,(617) 262-1212,c1815c11-0c92-4338-9824-48a19537723c,-71.077384,42.350476,7-Eleven,Boston,MA,us
+8753,"Retail, Convenience Stores",1741 Hooper Ave,7-Eleven,http://www.7-eleven.com/,(732) 255-8564,44505a63-10d3-4334-a6bd-257f6efac2b9,-74.15016,40.005163,7-Eleven,Toms River,NJ,us
+94536,"Retail, Convenience Stores",35015 Fremont Blvd,7-Eleven,http://www.7-eleven.com/,(510) 792-7111,18f84498-d89d-4eab-91a8-211eb06141c5,-122.032358,37.570185,7-Eleven,Fremont,CA,us
+23456,"Retail, Convenience Stores",2093 Lynnhaven Pkwy,7-Eleven,http://www.7-eleven.com/,(757) 416-0261,12f8f78b-04c7-40e4-86a7-efddd18e2784,-76.124554,36.789846,7-Eleven,Virginia Beach,VA,us
+78701,"Retail, Convenience Stores",408 W 15th St,7-Eleven,http://www.7-eleven.com/,(512) 474-1060,297a78db-b4fb-484d-9bf6-d6da1ab67a85,-97.743672,30.278541,7-Eleven,Austin,TX,us
+8057,"Retail, Convenience Stores",1 E Camden Ave,7-Eleven,http://www.7-eleven.com/,(856) 722-0711,2dbe36e4-1d7c-4627-a578-f4d3159313a9,-74.978865,39.95816,7-Eleven,Moorestown,NJ,us
+1841,"Retail, Convenience Stores",370 Broadway,7-Eleven,http://www.7-eleven.com/,(978) 686-1633,8415585c-1db4-42ba-bf56-d6cf538c91cc,-71.174278,42.711554,7-Eleven,Lawrence,MA,us
+48334,"Retail, Convenience Stores",29318 Orchard Lake Rd,7-Eleven,http://www.7-eleven.com/,(248) 851-6177,79bea077-e252-4bf1-b16c-9ec9a88319b7,-83.358593,42.512851,7-Eleven,Farmington Hills,MI,us
+22401,"Retail, Convenience Stores",1613 Dixon St,7-Eleven,http://www.7-eleven.com/,(540) 373-1753,b16e458a-72e8-4d24-b33a-ec74ddfd9271,-77.454401,38.281902,7-Eleven,Fredericksburg,VA,us
+97405,"Retail, Convenience Stores",2895 Willamette St,7-Eleven,http://www.7-eleven.com/,(541) 484-0247,443ede75-9d07-4b5a-b16f-74d25ca7557f,-123.090319,44.026453,7-Eleven,Eugene,OR,us
+17057,"Retail, Convenience Stores",12 E Main St,7-Eleven,http://www.7-eleven.com/,(717) 944-5639,0349e0ff-f5b7-4ffa-9f70-9f94e56e5a7d,-76.730642,40.19959,7-Eleven,Middletown,PA,us
+33026,"Retail, Convenience Stores",12351 Taft St,7-Eleven,http://www.7-eleven.com/,(954) 432-7577,1187528f-0d86-414f-8ec1-8baae1ea0afa,-80.31168,26.02288,7-Eleven,Pembroke Pines,FL,us
+23603,"Retail, Convenience Stores",14500 Jefferson Ave,7-Eleven,http://www.7-eleven.com/,(757) 887-0100,20e51e65-6a46-4183-8525-b732810dd2ba,-76.573827,37.208012,7-Eleven,Newport News,VA,us
+64114,"Retail, Convenience Stores",8901 Wornall Rd,7-Eleven,http://www.7-eleven.com/,(816) 361-1211,0cf1d39e-88a1-446d-acd4-7544f21a442a,-94.594862,38.966622,7-Eleven,Kansas City,MO,us
+33913,"Retail, Convenience Stores",12011 Gateway Blvd,7-Eleven,http://www.7-eleven.com/,(239) 454-0225,12be8a7a-9d61-481d-b240-9ef76ef5b156,-81.748125,26.571102,7-Eleven,Fort Myers,FL,us
