@@ -1,0 +1,55 @@
+<%= form_for [:admin, @user], :html => {class: 'form-horizontal user'} do |f| %>
+    <div class="box-body resize">
+      <% if @user.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@user.errors.count, 'error') %> prohibited this user from being
+                saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+
+
+
+      <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, :class => 'form-control', :id => 'first-name', :placeholder => 'Enter First Name' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, :class => 'form-control', :id => 'last-name', :placeholder => 'Enter Last Name'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, :class => 'form-control', :id => 'email', :placeholder => 'Enter Email'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, :class => 'form-control', :id => 'phone_number', :placeholder => 'Phone Number'  %>
+      </div>
+
+      <!--<div class="form-group">-->
+        <!--<%#= f.label :password %>-->
+        <!--<%#= f.password_field :password, :class => 'form-control', :id => 'password', :placeholder => 'Enter Password'  %>-->
+      <!--</div>-->
+
+    </div>
+
+
+    <div class="box-footer">
+      <%= f.submit nil, :class => 'btn btn-sm btn-success' %>
+      <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
+                  admin_users_path, :class => 'btn btn-sm btn-default' %>
+    </div>
+
+<% end %>

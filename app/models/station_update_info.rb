@@ -1,0 +1,2 @@
+class StationUpdateInfo < ApplicationRecord
+end

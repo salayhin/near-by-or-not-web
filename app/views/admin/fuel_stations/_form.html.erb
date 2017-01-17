@@ -1,0 +1,83 @@
+<% is_active_true = @fuel_station.present? && @fuel_station.is_active ? true : false -%>
+<% is_active_false = @fuel_station.present? && !@fuel_station.is_active ? false : true -%>
+
+<%= form_for [:admin, @fuel_station], :html => {class: 'form-horizontal user'} do |f| %>
+    <div class="box-body resize">
+      <% if @fuel_station.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@fuel_station.errors.count, 'error') %> prohibited this user from being
+                saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @fuel_station.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+
+
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'form-control', :id => 'name', :placeholder => 'Enter Name' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :latitude %>
+        <%= f.text_field :latitude, :class => 'form-control', :id => 'latitude', :placeholder => 'Enter latitude'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude, :class => 'form-control', :id => 'longitude', :placeholder => 'Enter longitude'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address, :class => 'form-control', :id => 'address', :placeholder => 'Enter address'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, :class => 'form-control', :id => 'phone_number', :placeholder => 'Enter Phone Number'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :comments %>
+        <%= f.text_field :comments, :class => 'form-control', :id => 'comments', :placeholder => 'Enter Comments'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :color_code %>&nbsp;
+        <%#= f.text_field :color_code, :class => 'form-control', :id => 'color_code', :placeholder => 'Enter Color Code'  %>
+
+        <%= f.select(:color_code, options_for_select([ ['Blue', 'Blue', {:class=>'bg-blue'}], ['Green', 'Green', {:class=>'bg-green'}],
+                                                       ['Yellow', 'Yellow', {:class=>'bg-yellow'}], ['Red', 'Red', {:class=>'bg-red'}],
+                                                       ['Gray', 'Gray', {:class=>'bg-gray'}]],
+            :selected => f.object.color_code), :class => 'form-control', :include_blank => 'Please Select' )%>
+
+      </div>
+
+      <div class="form-group">
+        <%= f.label :is_active %><br />
+
+        <%= f.label :is_active, 'Yes', :value => 'true' %>
+        <%= f.radio_button :is_active, true %>
+
+        <%= f.label :is_active, 'No', :value => 'false', :checked => true %>
+        <%= f.radio_button :is_active, false %>
+      </div>
+    </div>
+
+
+    <div class="box-footer">
+      <%= f.submit nil, :class => 'btn btn-sm btn-success' %>
+      <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
+                  admin_fuel_stations_path, :class => 'btn btn-sm btn-default' %>
+    </div>
+
+<% end %>

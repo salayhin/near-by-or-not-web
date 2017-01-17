@@ -1,0 +1,77 @@
+<section class="content-header header-resize">
+  <%- model_class = User -%>
+    <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+
+  <!--<ol class="breadcrumb">-->
+    <!--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
+    <!--<li><a href="#">Tables</a></li>-->
+    <!--<li class="active">Simple</li>-->
+  <!--</ol>-->
+</section>
+
+<div class="col-xs-12">
+  <div class="box">
+    <div class="box-header">
+
+      <!--<div class="box-tools">-->
+      <!--<div class="input-group input-group-sm" style="width: 150px;">-->
+      <!--<input type="text" name="table_search" class="form-control pull-right" placeholder="Search">-->
+
+      <!--<div class="input-group-btn">-->
+      <!--<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+      <table class="table table-hover">
+        <tbody>
+
+            <tr>
+              <td><%= model_class.human_attribute_name(:first_name) %></td>
+              <td><%= @user.first_name %></td>
+            </tr>
+
+            <tr>
+              <td><%= model_class.human_attribute_name(:last_name) %></td>
+              <td><%= @user.last_name %></td>
+            <tr>
+
+
+            <tr>
+              <td><%= model_class.human_attribute_name(:email) %></td>
+              <td><%= @user.email %></td>
+            <tr>
+
+            <tr>
+              <td><%= model_class.human_attribute_name(:phone_number) %></td>
+              <td><%= @user.phone_number %></td>
+            <tr>
+
+            <tr>
+              <td><%= model_class.human_attribute_name(:created_at) %></td>
+              <td><%= (@user.created_at).strftime('%a, %d %B, %Y') %></td>
+            </tr>
+
+            <tr>
+              <td>
+                <%= link_to t('.show', :default => t('helpers.links.show')),
+                            admin_user_path(@user), :class => 'btn btn-sm btn-default' %>
+                <%= link_to t('.edit', :default => t('helpers.links.edit')),
+                            edit_admin_user_path(@user), :class => 'btn btn-sm btn-warning' %>
+                <%= link_to t('.destroy', :default => t('helpers.links.destroy')),
+                            admin_user_path(@user),
+                            :method => :delete,
+                            :data => { :confirm => t('.confirm', :default => t('helpers.links.confirm', :default => 'Are you sure?')) },
+                            :class => 'btn btn-sm btn-danger' %>
+              </td>
+            </tr>
+
+        </tbody></table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+  <!-- /.box -->
+</div>
+
