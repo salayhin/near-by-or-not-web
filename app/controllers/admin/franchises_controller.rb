@@ -34,7 +34,7 @@ class Admin::FranchisesController < ApplicationController
 
   def update
     respond_to do |format|
-      if @franchise.update(admin_fuel_station_params)
+      if @franchise.update(admin_franchise_params)
         format.html { redirect_to admin_franchise_path, notice: 'Franchise was successfully updated.' }
       else
         format.html { render :edit }
