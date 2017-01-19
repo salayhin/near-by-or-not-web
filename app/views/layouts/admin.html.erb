@@ -4,7 +4,7 @@
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>WW CNG Fuel Finder | Admin Panel</title>
+  <title>Near by of Not | Admin Panel</title>
 
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -29,9 +29,9 @@
     <!-- Logo -->
     <a href="/admin/users" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>WW</b></span>
+      <span class="logo-mini"><b>NEAR</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg">WW CNG Fuel Finder</span>
+      <span class="logo-lg">Near by or Not</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -137,20 +137,20 @@
 
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-th"></i> <span>Fuel Stations</span>
+            <i class="fa fa-th"></i> <span>Franchises</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
             <li class="active">
-              <%= link_to admin_fuel_stations_path  do %>
-                  <i class="fa fa-circle-o"></i> All Stations</a>
+              <%= link_to admin_franchises_path  do %>
+                  <i class="fa fa-circle-o"></i> All Franchises</a>
               <% end %>
             </li>
             <li class="active">
-              <%= link_to new_admin_fuel_station_path  do %>
-                  <i class="fa fa-circle-o"></i> New Station</a>
+              <%= link_to new_admin_franchise_path  do %>
+                  <i class="fa fa-circle-o"></i> New Franchise</a>
               <% end %>
             </li>
           </ul>
@@ -287,7 +287,7 @@
     <div class="pull-right hidden-xs">
       <!--<b>Version</b> 2.3.6-->
     </div>
-    <strong>Copyright &copy; 2016-2017 WW CNG Fuel Finder</strong> All rights
+    <strong>Copyright &copy; 2017-2018 Near by or Not</strong> All rights
     reserved.
   </footer>
 

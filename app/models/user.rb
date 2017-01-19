@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   #validates :phone_number, presence: true
-  validates :phone_number, :format => { :with => /\A(\+1)?[0-9]{10}\z/, :message => 'error! Please use valid 10-digit phone number' },
-            :uniqueness => true
+  # validates :phone_number, :format => { :with => /\A(\+1)?[0-9]{10}\z/, :message => 'error! Please use valid 10-digit phone number' },
+  #           :uniqueness => true
 
   has_one :api_key
 
@@ -15,11 +15,11 @@ class User < ApplicationRecord
     false
   end
 
-  def email_required?
-    false
-  end
-
-  def email_changed?
-    false
-  end
+  # def email_required?
+  #   false
+  # end
+  #
+  # def email_changed?
+  #   false
+  # end
 end

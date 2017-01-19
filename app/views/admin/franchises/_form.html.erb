@@ -1,0 +1,99 @@
+
+<%= form_for [:admin, @franchise], :html => {class: 'form-horizontal user'} do |f| %>
+    <div class="box-body resize">
+      <% if @franchise.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@franchise.errors.count, 'error') %> prohibited this user from being
+                saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @franchise.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= f.label :factual_id %>
+        <%= f.text_field :factual_id, :class => 'form-control', :id => 'factual_id', :placeholder => 'Enter Factual ID' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'form-control', :id => 'name', :placeholder => 'Enter Name' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address, :class => 'form-control', :id => 'address', :placeholder => 'Enter Address' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :locality %>
+        <%= f.text_field :locality, :class => 'form-control', :id => 'locality', :placeholder => 'Enter Locality' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :region %>
+        <%= f.text_field :region, :class => 'form-control', :id => 'region', :placeholder => 'Enter Region' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :post_code %>
+        <%= f.text_field :post_code, :class => 'form-control', :id => 'address', :placeholder => 'Enter Post Code' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :country %>
+        <%= f.text_field :country, :class => 'form-control', :id => 'address', :placeholder => 'Enter Country' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :telephone %>
+        <%= f.text_field :telephone, :class => 'form-control', :id => 'address', :placeholder => 'Enter Telephone' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :website %>
+        <%= f.text_field :website, :class => 'form-control', :id => 'address', :placeholder => 'Enter Website' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :latitude %>
+        <%= f.text_field :latitude, :class => 'form-control', :id => 'latitude', :placeholder => 'Enter latitude'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :longitude %>
+        <%= f.text_field :longitude, :class => 'form-control', :id => 'longitude', :placeholder => 'Enter longitude'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :hours_of_operations %>
+        <%= f.text_field :hours_of_operations, :class => 'form-control', :id => 'address', :placeholder => 'Enter Hours of Operations'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :category_labels %>
+        <%= f.text_field :category_labels, :class => 'form-control', :id => 'phone_number', :placeholder => 'Enter Category Labels'  %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :chain_name %>
+        <%= f.text_field :chain_name, :class => 'form-control', :id => 'comments', :placeholder => 'Enter Chain Name'  %>
+      </div>
+
+    </div>
+
+
+    <div class="box-footer">
+      <%= f.submit nil, :class => 'btn btn-sm btn-success' %>
+      <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
+                  admin_franchises_path, :class => 'btn btn-sm btn-default' %>
+    </div>
+
+<% end %>

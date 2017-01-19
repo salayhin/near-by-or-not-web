@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
     resources :users
-    resources :fuel_stations
+    resources :franchises
   end
 
   mount API::Base, at: '/'
