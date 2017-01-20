@@ -60,10 +60,13 @@
                   <th>Franchise Name</th>
                 </tr>
 
+                <% i = 1 %>
                 <% @not_near_by_franchises.each do |franchise| %>
+
                     <tr>
-                      <td><%= franchise %></td>
+                      <td><strong><%= i %>.</strong> <%= franchise %></td>
                     </tr>
+                <% i += 1%>
                 <% end %>
 
                 </tbody></table>
