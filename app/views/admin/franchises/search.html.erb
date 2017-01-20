@@ -1,12 +1,7 @@
 <section class="content-header">
   <h1>
-    Edit Franchise
+    Search Franchise
   </h1>
-  <!--<ol class="breadcrumb">-->
-  <!--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
-  <!--<li><a href="#">Forms</a></li>-->
-  <!--<li class="active">General Elements</li>-->
-  <!--</ol>-->
 </section>
 
 
@@ -25,8 +20,12 @@
             <div class="box-body resize">
 
               <div class="form-group">
-                <%= label_tag 'Search' %>
-                <%= text_field_tag :search %>
+
+                <div class="col-sm-6">
+                  <%= label_tag 'Search' %>
+                  <%= text_area_tag :search, '', class: 'form-control' %>
+                </div>
+
               </div>
 
             </div>
@@ -44,6 +43,36 @@
 
     </div>
 
+  </div>
+
+  <div>
+    <% if @not_near_by_franchises.present? %>
+        <div class="col-xs-12">
+          <div class="box top-margin">
+            <div class="box-header">
+              <h2><%= @search_param if @search_param.present? %></h2>
+              <h3 class="box-title">Not Near By Franchises</h3>
+            </div>
+
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tbody><tr>
+                  <th>Franchise Name</th>
+                </tr>
+
+                <% @not_near_by_franchises.each do |franchise| %>
+                    <tr>
+                      <td><%= franchise %></td>
+                    </tr>
+                <% end %>
+
+                </tbody></table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+    <% end %>
   </div>
 
   <div>

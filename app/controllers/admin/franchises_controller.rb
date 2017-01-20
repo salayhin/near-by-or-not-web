@@ -24,7 +24,7 @@ class Admin::FranchisesController < ApplicationController
   end
 
   def search
-    if request.post? #params['commit'] == 'Submit'
+    if request.post?
       search_address
     end
   end
@@ -37,10 +37,16 @@ class Admin::FranchisesController < ApplicationController
 
     if data['status'] == Franchise::STATUS[:OK]
       @results = Franchise.within_radius(data['lat'], data['lng'], 10000)
+      @nearby_franchises = Franchise.within_radius(data['lat'], data['lng'], 10000).distinct.pluck(:name)
+
+      @not_near_by_franchises = Franchise::ALL_FRANCHISE - @nearby_franchises if @nearby_franchises.present?
+      @search_param = data['search_param']
     end
 
     if data['status'] == Franchise::STATUS[:NOT_FOUND]
       @results = []
+      @search_param = data['search_param']
+      @not_near_by_franchises = Franchise::ALL_FRANCHISE
     end
   end
 
@@ -56,10 +62,10 @@ class Admin::FranchisesController < ApplicationController
       lat = data['results'][0]['geometry']['location']['lat']
       lng = data['results'][0]['geometry']['location']['lng']
 
-      {'status' => Franchise::STATUS[:OK], 'lat' => lat, 'lng' => lng}
+      {'status' => Franchise::STATUS[:OK], 'lat' => lat, 'lng' => lng, 'search_param' => address}
 
     else
-      {'status' => Franchise::STATUS[:NOT_FOUND]}
+      {'status' => Franchise::STATUS[:NOT_FOUND], 'search_param' => address}
     end
 
   end

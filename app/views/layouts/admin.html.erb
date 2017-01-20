@@ -47,7 +47,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
               <span class="hidden-xs">
-                <%= current_user.phone_number if current_user.present? %>
+                <%= current_user.email if current_user.present? %>
               </span>
             </a>
             <ul class="dropdown-menu">
@@ -114,26 +114,26 @@
           <!--</ul>-->
         <!--</li>-->
 
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-th"></i> <span>Users</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active">
-              <%= link_to admin_users_path  do %>
-                  <i class="fa fa-circle-o"></i> All Users</a>
-              <% end %>
-            </li>
-            <li class="active">
-              <%= link_to new_admin_user_path  do %>
-                  <i class="fa fa-circle-o"></i> New User</a>
-              <% end %>
-            </li>
-          </ul>
-        </li>
+        <!--<li class="active treeview">-->
+          <!--<a href="#">-->
+            <!--<i class="fa fa-th"></i> <span>Users</span>-->
+            <!--<span class="pull-right-container">-->
+              <!--<i class="fa fa-angle-left pull-right"></i>-->
+            <!--</span>-->
+          <!--</a>-->
+          <!--<ul class="treeview-menu">-->
+            <!--<li class="active">-->
+              <!--<%#= link_to admin_users_path  do %>-->
+                  <!--<i class="fa fa-circle-o"></i> All Users</a>-->
+              <!--<%# end %>-->
+            <!--</li>-->
+            <!--<li class="active">-->
+              <!--<%#= link_to new_admin_user_path  do %>-->
+                  <!--<i class="fa fa-circle-o"></i> New User</a>-->
+              <!--<%# end %>-->
+            <!--</li>-->
+          <!--</ul>-->
+        <!--</li>-->
 
         <li class="active treeview">
           <a href="#">
@@ -149,10 +149,15 @@
               <% end %>
             </li>
             <li class="active">
-              <%= link_to new_admin_franchise_path  do %>
-                  <i class="fa fa-circle-o"></i> New Franchise</a>
-              <% end %>
+            <%= link_to admin_franchises_search_path  do %>
+            <i class="fa fa-circle-o"></i> Near By or Not Franchise</a>
+            <% end %>
             </li>
+            <!--<li class="active">-->
+              <!--<%#= link_to new_admin_franchise_path  do %>-->
+                  <!--<i class="fa fa-circle-o"></i> New Franchise</a>-->
+              <!--<%# end %>-->
+            <!--</li>-->
           </ul>
         </li>
 

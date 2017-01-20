@@ -2,7 +2,7 @@
   <%- model_class = Franchise -%>
   <h1>
     <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
-    <%= link_to 'New Station',
+    <%#= link_to 'New Station',
                 new_admin_franchise_path,
                 :class => 'btn btn-sm btn-success' %>
   </h1>
@@ -72,10 +72,10 @@
               <td><%#= (franchise.created_at).strftime('%a, %d %B, %Y') %></td>
               <td>
                 <%= link_to t('.show', :default => t('helpers.links.show')),
-                            admin_franchise_path(franchise), :class => 'btn btn-sm btn-default' %>
-                <%= link_to t('.edit', :default => t('helpers.links.edit')),
+                            admin_franchise_path(franchise), :class => 'btn btn-sm btn-success' %>
+                <%#= link_to t('.edit', :default => t('helpers.links.edit')),
                             edit_admin_franchise_path(franchise), :class => 'btn btn-sm btn-warning' %>
-                <%= link_to t('.destroy', :default => t('helpers.links.destroy')),
+                <%#= link_to t('.destroy', :default => t('helpers.links.destroy')),
                             admin_franchise_path(franchise),
                             :method => :delete,
                             :data => { :confirm => t('.confirm', :default => t('helpers.links.confirm', :default => 'Are you sure?')) },
@@ -83,11 +83,9 @@
               </td>
             </tr>
         <% end %>
-        <tr>
-          <td colspan="11" class="pull-right"><%= will_paginate @franchises %></td>
-        </tr>
 
         </tbody></table>
+      <div class="pull-right"><strong><%= will_paginate @franchises %></strong></div>
     </div>
     <!-- /.box-body -->
   </div>

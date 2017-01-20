@@ -9,7 +9,7 @@
   <!--</ol>-->
 </section>
 
-<div class="col-xs-12">
+<div class="col-xs-6">
   <div class="box">
     <div class="box-header">
 
@@ -105,11 +105,11 @@
 
         <tr>
           <td>
-            <%= link_to t('.show', :default => t('helpers.links.show')),
+            <%#= link_to t('.show', :default => t('helpers.links.show')),
                         admin_franchise_path(@franchise), :class => 'btn btn-sm btn-default' %>
-            <%= link_to t('.edit', :default => t('helpers.links.edit')),
+            <%#= link_to t('.edit', :default => t('helpers.links.edit')),
                         edit_admin_franchise_path(@franchise), :class => 'btn btn-sm btn-warning' %>
-            <%= link_to t('.destroy', :default => t('helpers.links.destroy')),
+            <%#= link_to t('.destroy', :default => t('helpers.links.destroy')),
                         admin_franchise_path(@franchise),
                         :method => :delete,
                         :data => { :confirm => t('.confirm', :default => t('helpers.links.confirm', :default => 'Are you sure?')) },
@@ -121,6 +121,25 @@
     </div>
     <!-- /.box-body -->
   </div>
+
+
   <!-- /.box -->
 </div>
 
+<div class="col-xs-6">
+
+  <div class="box">
+    <div class="box-body table-responsive no-padding">
+      <iframe
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCoUewMKy36S4idpKRNCsynb2pMIMqihDY
+            &q=<%= @franchise.address %>, <%=  @franchise.locality %>+<%=  @franchise.region %>+<%= @franchise.post_code %>+
+            <%= @franchise.country %>" allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</div>
