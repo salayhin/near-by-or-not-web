@@ -1,0 +1,53 @@
+<section class="content-header">
+  <h1>
+    Edit Franchise
+  </h1>
+  <!--<ol class="breadcrumb">-->
+  <!--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
+  <!--<li><a href="#">Forms</a></li>-->
+  <!--<li class="active">General Elements</li>-->
+  <!--</ol>-->
+</section>
+
+
+<section class="content">
+  <div class="row">
+    <!-- left column -->
+    <div class="col-md-6">
+      <!-- general form elements -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <!--<h3 class="box-title">Quick Example</h3>-->
+        </div>
+
+
+        <%= form_tag(admin_franchises_search_submit_path , :method => :post, :class => 'form-horizontal user') do |f| %>
+            <div class="box-body resize">
+
+              <div class="form-group">
+                <%= label_tag 'Search' %>
+                <%= text_field_tag :search %>
+              </div>
+
+            </div>
+
+
+            <div class="box-footer">
+              <%= submit_tag nil, :class => 'btn btn-sm btn-success' %>
+              <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
+                          admin_franchises_search_path, :class => 'btn btn-sm btn-default' %>
+            </div>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      &nbsp;
+    </div>
+
+  </div>
+  <!-- /.row -->
+</section>

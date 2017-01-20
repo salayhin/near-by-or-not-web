@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
     resources :users
+    get 'franchises/search' => 'franchises#search'
+    post 'franchises/search_submit' => 'franchises#search'
     resources :franchises
   end
 
