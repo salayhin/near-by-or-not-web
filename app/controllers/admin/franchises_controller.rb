@@ -1,4 +1,7 @@
 class Admin::FranchisesController < ApplicationController
+  require 'net/http'
+  require 'json'
+
   before_filter :authenticate_user!
   layout 'admin'
   before_action :set_admin_franchise, only: [:show, :edit, :update, :destroy]
@@ -21,7 +24,46 @@ class Admin::FranchisesController < ApplicationController
   end
 
   def search
+    if request.post? #params['commit'] == 'Submit'
+      search_address
+    end
   end
+
+  def search_submit
+  end
+
+  def search_address
+    data = self.get_latitude_and_longitude(params['search'])
+
+    if data['status'] == Franchise::STATUS[:OK]
+      @results = Franchise.within_radius(data['lat'], data['lng'], 10000)
+    end
+
+    if data['status'] == Franchise::STATUS[:NOT_FOUND]
+      @results = []
+    end
+  end
+
+  def get_latitude_and_longitude(address)
+    url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=' + Franchise::GOOGLE[:api_key]
+
+    escaped_address = URI.escape(url)
+    uri = URI.parse(escaped_address)
+    response = Net::HTTP.get(uri)
+    data = JSON.parse(response)
+
+    if data['results'].size > 0 && data['status'] == 'OK'
+      lat = data['results'][0]['geometry']['location']['lat']
+      lng = data['results'][0]['geometry']['location']['lng']
+
+      {'status' => Franchise::STATUS[:OK], 'lat' => lat, 'lng' => lng}
+
+    else
+      {'status' => Franchise::STATUS[:NOT_FOUND]}
+    end
+
+  end
+
 
   def create
     @franchise = Franchise.new(admin_franchise_params)

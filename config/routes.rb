@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get 'dashboard' => 'dashboard#index'
     resources :users
     get 'franchises/search' => 'franchises#search'
-    post 'franchises/search_submit' => 'franchises#search'
+    post 'franchises/search' => 'franchises#search'
     resources :franchises
   end
 
