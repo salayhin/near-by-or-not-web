@@ -8,7 +8,7 @@ class Admin::FranchisesController < ApplicationController
 
 
   def index
-    @franchises = Franchise.order('id ASC').paginate(:page => params[:page])
+    @franchises = Franchise.order('is_client DESC, rank ASC').paginate(:page => params[:page])
   end
 
 

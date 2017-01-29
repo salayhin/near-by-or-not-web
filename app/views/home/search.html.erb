@@ -1,0 +1,125 @@
+<div class="jumbotron">
+  <h1>Near by or Not</h1>
+  <p class="lead">You can find near by franchises </p>
+  <!--<p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>-->
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+
+
+    <%= form_tag( '' , :method => :post, :class => 'form-horizontal user') do |f| %>
+        <div class="resize">
+
+          <div class="form-group">
+
+            <div class="col-sm-6">
+              <%= label_tag 'Search' %>
+              <%= text_area_tag :search, '', class: 'form-control' %>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="box-footer">
+          <%= submit_tag nil, :class => 'btn btn-sm btn-success' %>
+          <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
+                      search_path, :class => 'btn btn-sm btn-default' %>
+        </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+<div class="row">
+  <% if @not_near_by_franchises.present? %>
+      <div class="col-xs-12">
+        <div class="box top-margin">
+          <div class="box-header">
+            <h2><%= @search_param if @search_param.present? %></h2>
+            <h3 class="box-title">Not Near By Franchises</h3>
+          </div>
+
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+              <tbody><tr>
+                <th>Franchise Name</th>
+              </tr>
+
+              <% i = 1 %>
+              <% @not_near_by_franchises.each do |franchise| %>
+
+                  <tr>
+                    <td><strong>Rank: &nbsp;<%= franchise.rank %>.</strong> <%= franchise.name %></td>
+                    <td><%= image_tag franchise.logo_url(:thumb), alt: "#{franchise.name}" if franchise.logo.present?%></td>
+                  </tr>
+                  <% i += 1%>
+              <% end %>
+
+              </tbody></table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+  <% end %>
+</div>
+
+
+<div class="row">
+  <% if @results.present? %>
+
+      <div class="col-xs-12">
+        <div class="box top-margin">
+          <div class="box-header">
+            <h3 class="box-title">Near By Franchises</h3>
+          </div>
+
+          <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+              <tbody><tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Locality</th>
+                <th>Region</th>
+                <th>Post Code</th>
+                <th>Country</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Category Labels</th>
+              </tr>
+
+              <% @results.each do |franchise| %>
+                  <tr>
+                    <td><%= link_to franchise.id, admin_franchise_path(franchise) %></td>
+                    <td><%= franchise.name %></td>
+                    <td><%= franchise.address %></td>
+                    <td><%= franchise.locality %></td>
+                    <td><%= franchise.region %></td>
+                    <td><%= franchise.post_code %></td>
+                    <td><%= franchise.country %></td>
+                    <td><%= franchise.latitude %></td>
+                    <td><%= franchise.longitude %></td>
+                    <td><%= franchise.category_labels %></td>
+                    <td>
+                    </td>
+                  </tr>
+              <% end %>
+              <tr>
+                <td colspan="11" class="pull-right"><%#= will_paginate @results %></td>
+              </tr>
+
+              </tbody></table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+
+
+  <% end %>
+</div>

@@ -11,7 +11,14 @@
  * file per style scope.
  *
  *= require bootstrap
- *= require justified-nav
+ *= require AdminLTE.min
+ *= require _all-skins
+ *= require plugins/iCheck/flat/blue
+ *= require plugins/morris/morris
+ *= require plugins/jvectormap/jquery-jvectormap-1.2.2
+ *= require plugins/datepicker/datepicker3
+ *= require plugins/daterangepicker/daterangepicker
+ *= require plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min
  *= require style
  *= require_tree .
  *= require_self

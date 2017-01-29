@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     resources :franchise_locations
   end
 
+  get '/search' => 'home#search'
+  post '/search' => 'home#search'
+
   mount API::Base, at: '/'
   mount GrapeSwaggerRails::Engine, at: '/documentation'
 

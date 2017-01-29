@@ -3,6 +3,8 @@ class Franchise < ApplicationRecord
 
   has_many :franchise_locations
 
+  ALL_FRANCHISE = Franchise.distinct.pluck(:id)
+
   mount_uploader :logo, FranchiseLogoUploader
 
   def self.find_franchise(name)
