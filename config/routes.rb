@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   mount API::Base, at: '/'
   mount GrapeSwaggerRails::Engine, at: '/documentation'
 
-  root to: 'admin/dashboard#index'
+  #root to: 'admin/dashboard#index'
+  root to: 'home#search'
 end

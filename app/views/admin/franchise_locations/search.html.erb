@@ -45,7 +45,7 @@
 
   </div>
 
-  <div>
+  <div class="row">
     <% if @not_near_by_franchises.present? %>
         <div class="col-xs-12">
           <div class="box top-margin">
@@ -60,13 +60,16 @@
                   <th>Franchise Name</th>
                 </tr>
 
-                <% i = 1 %>
                 <% @not_near_by_franchises.each do |franchise| %>
 
                     <tr>
-                      <td><strong><%= i %>.</strong> <%= franchise %></td>
+                      <td>
+                        <p><strong>Rank:</strong> &nbsp;<%= franchise.rank %></p>
+                        <p><strong>Name:</strong> &nbsp;<%= franchise.name if franchise.name.present? %></p>
+                        <p><strong>Website:</strong> &nbsp;<%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'Not Found' %></p>
+                      </td>
+                      <td><%= image_tag franchise.logo_url(:thumb), alt: "#{franchise.name}" if franchise.logo.present?%></td>
                     </tr>
-                <% i += 1%>
                 <% end %>
 
                 </tbody></table>
@@ -77,6 +80,7 @@
         </div>
     <% end %>
   </div>
+
 
   <div>
     <% if @results.present? %>

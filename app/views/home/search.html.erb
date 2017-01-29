@@ -8,7 +8,7 @@
   <div class="col-lg-12">
 
 
-    <%= form_tag( '' , :method => :post, :class => 'form-horizontal user') do |f| %>
+    <%= form_tag( search_path , :method => :post, :class => 'form-horizontal user') do |f| %>
         <div class="resize">
 
           <div class="form-group">
@@ -49,14 +49,16 @@
                 <th>Franchise Name</th>
               </tr>
 
-              <% i = 1 %>
               <% @not_near_by_franchises.each do |franchise| %>
 
                   <tr>
-                    <td><strong>Rank: &nbsp;<%= franchise.rank %>.</strong> <%= franchise.name %></td>
+                    <td>
+                      <p><strong>Rank:</strong> &nbsp;<%= franchise.rank %></p>
+                      <p><strong>Name:</strong> &nbsp;<%= franchise.name if franchise.name.present? %></p>
+                      <p><strong>Website:</strong> &nbsp;<%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'Not Found' %></p>
+                    </td>
                     <td><%= image_tag franchise.logo_url(:thumb), alt: "#{franchise.name}" if franchise.logo.present?%></td>
                   </tr>
-                  <% i += 1%>
               <% end %>
 
               </tbody></table>
@@ -65,61 +67,5 @@
         </div>
         <!-- /.box -->
       </div>
-  <% end %>
-</div>
-
-
-<div class="row">
-  <% if @results.present? %>
-
-      <div class="col-xs-12">
-        <div class="box top-margin">
-          <div class="box-header">
-            <h3 class="box-title">Near By Franchises</h3>
-          </div>
-
-          <div class="box-body table-responsive no-padding">
-            <table class="table table-hover">
-              <tbody><tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Locality</th>
-                <th>Region</th>
-                <th>Post Code</th>
-                <th>Country</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
-                <th>Category Labels</th>
-              </tr>
-
-              <% @results.each do |franchise| %>
-                  <tr>
-                    <td><%= link_to franchise.id, admin_franchise_path(franchise) %></td>
-                    <td><%= franchise.name %></td>
-                    <td><%= franchise.address %></td>
-                    <td><%= franchise.locality %></td>
-                    <td><%= franchise.region %></td>
-                    <td><%= franchise.post_code %></td>
-                    <td><%= franchise.country %></td>
-                    <td><%= franchise.latitude %></td>
-                    <td><%= franchise.longitude %></td>
-                    <td><%= franchise.category_labels %></td>
-                    <td>
-                    </td>
-                  </tr>
-              <% end %>
-              <tr>
-                <td colspan="11" class="pull-right"><%#= will_paginate @results %></td>
-              </tr>
-
-              </tbody></table>
-          </div>
-          <!-- /.box-body -->
-        </div>
-        <!-- /.box -->
-      </div>
-
-
   <% end %>
 </div>
