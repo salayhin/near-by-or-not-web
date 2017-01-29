@@ -11,7 +11,10 @@ Rails.application.routes.draw do
     resources :users
     get 'franchise_locations/search' => 'franchise_locations#search'
     post 'franchise_locations/search' => 'franchise_locations#search'
-    resources :franchises
+
+    resources :franchises do
+      get 'all_locations' => 'franchise_locations#all_location_by_franchise_id'
+    end
     resources :franchise_locations
   end
 

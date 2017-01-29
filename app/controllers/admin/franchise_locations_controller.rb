@@ -23,6 +23,10 @@ class Admin::FranchiseLocationsController < ApplicationController
   def edit
   end
 
+  def all_location_by_franchise_id
+    @franchises = FranchiseLocation.where(:franchise_id => params[:franchise_id]).paginate(:page => params[:page]) if params[:franchise_id].present?
+  end
+
   def search
     if request.post?
       search_address

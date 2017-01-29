@@ -1,5 +1,5 @@
 <section class="content-header header-resize">
-  <%- model_class = Franchise -%>
+  <%- model_class = FranchiseLocation -%>
   <h1>
     <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
     <%#= link_to 'New Station',
@@ -7,9 +7,9 @@
                 :class => 'btn btn-sm btn-success' %>
   </h1>
   <!--<ol class="breadcrumb">-->
-    <!--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
-    <!--<li><a href="#">Tables</a></li>-->
-    <!--<li class="active">Simple</li>-->
+  <!--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
+  <!--<li><a href="#">Tables</a></li>-->
+  <!--<li class="active">Simple</li>-->
   <!--</ol>-->
 </section>
 
@@ -34,12 +34,19 @@
       <table class="table table-hover">
         <tbody><tr>
           <th><%= model_class.human_attribute_name(:id) %></th>
+          <th><%#= model_class.human_attribute_name(:factual_id) %></th>
           <th><%= model_class.human_attribute_name(:name) %></th>
-          <th><%= model_class.human_attribute_name(:rank) %></th>
-          <th><%= model_class.human_attribute_name(:is_client) %></th>
-          <th><%= model_class.human_attribute_name(:website) %></th>
-          <th><%= model_class.human_attribute_name(:logo) %></th>
-          <th><%#= model_class.human_attribute_name(:category_labels) %></th>
+          <th><%= model_class.human_attribute_name(:address) %></th>
+          <th><%= model_class.human_attribute_name(:locality) %></th>
+          <th><%= model_class.human_attribute_name(:region) %></th>
+          <th><%= model_class.human_attribute_name(:post_code) %></th>
+          <th><%= model_class.human_attribute_name(:country) %></th>
+          <th><%#= model_class.human_attribute_name(:telephone) %></th>
+          <th><%#= model_class.human_attribute_name(:website) %></th>
+          <th><%= model_class.human_attribute_name(:latitude) %></th>
+          <th><%= model_class.human_attribute_name(:longitude) %></th>
+          <th><%#= model_class.human_attribute_name(:hours_of_operations) %></th>
+          <th><%= model_class.human_attribute_name(:category_labels) %></th>
           <th><%#= model_class.human_attribute_name(:chain_name) %></th>
           <th><%#= model_class.human_attribute_name(:created_at) %></th>
           <th><%=t '.actions', :default => t('helpers.actions') %></th>
@@ -47,21 +54,27 @@
 
         <% @franchises.each do |franchise| %>
             <tr>
-              <td><%= link_to franchise.id,  admin_franchise_path(franchise) %></td>
+              <td><%= link_to franchise.id,  admin_franchise_location_path(franchise) %></td>
+              <td><%#= franchise.factual_id %></td>
               <td><%= franchise.name %></td>
-              <td><%= franchise.rank %></td>
-              <td><span class="label label-<%= (franchise.is_client  ? 'success' : 'warning') %>"><%= (franchise.is_client  ? 'Yes' : 'No') %></span> </td>
-              <td><%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : '' %></td>
-              <td><%= link_to(image_tag(franchise.logo.present? ?  franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{franchise.name}"), franchise.website, :target => '_blank') %></td>
-              <td><%#= franchise.category_labels %></td>
+              <td><%= franchise.address %></td>
+              <td><%= franchise.locality %></td>
+              <td><%= franchise.region %></td>
+              <td><%= franchise.post_code %></td>
+              <td><%= franchise.country %></td>
+              <td><%#= franchise.telephone %></td>
+              <td><%#= franchise.website %></td>
+              <td><%= franchise.latitude %></td>
+              <td><%= franchise.longitude %></td>
+              <td><%= franchise.hours_of_operations %></td>
+              <td><%= franchise.category_labels %></td>
               <td><%#= franchise.chain_name %></td>
               <td><%#= (franchise.created_at).strftime('%a, %d %B, %Y') %></td>
               <td>
                 <%= link_to t('.show', :default => t('helpers.links.show')),
-                            admin_franchise_path(franchise), :class => 'btn btn-sm btn-success' %>
-                <%= link_to t('.edit', :default => t('helpers.links.edit')),
+                            admin_franchise_location_path(franchise), :class => 'btn btn-sm btn-success' %>
+                <%#= link_to t('.edit', :default => t('helpers.links.edit')),
                             edit_admin_franchise_path(franchise), :class => 'btn btn-sm btn-warning' %>
-                <%= link_to 'All Locations', admin_franchise_all_locations_path(franchise.id), :class => 'btn btn-sm btn-success' %>
                 <%#= link_to t('.destroy', :default => t('helpers.links.destroy')),
                             admin_franchise_path(franchise),
                             :method => :delete,
