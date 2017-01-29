@@ -2,7 +2,6 @@ class CreateFranchises < ActiveRecord::Migration[5.0]
   def change
     create_table :franchises do |t|
       t.string :name
-      t.string :factual_id
       t.integer :rank
       t.boolean :is_client
       t.string :website

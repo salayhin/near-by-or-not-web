@@ -1,6 +1,7 @@
 class CreateFranchiseLocations < ActiveRecord::Migration[5.0]
   def change
     create_table :franchise_locations do |t|
+      t.integer :franchise_id
       t.string :factual_id
       t.string :name
       t.text :address
