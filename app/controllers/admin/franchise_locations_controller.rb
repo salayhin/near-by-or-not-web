@@ -76,7 +76,7 @@ class Admin::FranchiseLocationsController < ApplicationController
 
     respond_to do |format|
       if @franchise.save
-        format.html { redirect_to admin_franchises_path, notice: 'FranchiseLocation was successfully created.' }
+        format.html { redirect_to admin_franchise_locations_path, notice: 'Franchise Location was successfully created.' }
       else
         format.html { render :new }
       end
@@ -86,7 +86,7 @@ class Admin::FranchiseLocationsController < ApplicationController
   def update
     respond_to do |format|
       if @franchise.update(admin_franchise_params)
-        format.html { redirect_to admin_franchise_path, notice: 'FranchiseLocation was successfully updated.' }
+        format.html { redirect_to admin_franchise_locations_path, notice: 'Franchise Location was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -96,7 +96,7 @@ class Admin::FranchiseLocationsController < ApplicationController
   def destroy
     @franchise.destroy
     respond_to do |format|
-      format.html { redirect_to admin_franchise_path, notice: 'FranchiseLocation was successfully destroyed.' }
+      format.html { redirect_to admin_franchise_locations_path, notice: 'Franchise Location was successfully destroyed.' }
     end
   end
 
