@@ -1,0 +1,96 @@
+<section class="content-header header-resize">
+  <%- model_class = Franchise -%>
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+
+  <!--<ol class="breadcrumb">-->
+    <!--<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>-->
+    <!--<li><a href="#">Tables</a></li>-->
+    <!--<li class="active">Simple</li>-->
+  <!--</ol>-->
+</section>
+
+<div class="col-xs-6">
+  <div class="box">
+    <div class="box-header">
+
+      <!--<div class="box-tools">-->
+      <!--<div class="input-group input-group-sm" style="width: 150px;">-->
+      <!--<input type="text" name="table_search" class="form-control pull-right" placeholder="Search">-->
+
+      <!--<div class="input-group-btn">-->
+      <!--<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+
+    <!-- /.box-header -->
+    <div class="box-body table-responsive no-padding">
+      <table class="table table-hover">
+        <tbody>
+
+
+        <tr>
+          <td><%= model_class.human_attribute_name(:name) %></td>
+          <td><%= @franchise.name %></td>
+        </tr>
+
+        <tr>
+          <td><%= model_class.human_attribute_name(:rank) %></td>
+          <td><%= @franchise.rank %></td>
+        </tr>
+
+        <tr>
+          <td><%= model_class.human_attribute_name(:is_client) %></td>
+          <td><span class="label label-<%= (@franchise.is_client  ? 'success' : 'warning') %>"><%= (@franchise.is_client  ? 'Yes' : 'No') %></span></td>
+        </tr>
+
+        <tr>
+          <td><%= model_class.human_attribute_name(:website) %></td>
+          <td><%= @franchise.website %></td>
+        </tr>
+
+
+        <tr>
+          <td><%= model_class.human_attribute_name(:logo) %></td>
+          <td><%= image_tag @franchise.logo.present? ? @franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{@franchise.name}" %></td>
+        <tr>
+
+        <!--<tr>-->
+          <!--<td><%#= model_class.human_attribute_name(:category_labels) %></td>-->
+          <!--<td><%#= @franchise.category_labels %></td>-->
+        <!--<tr>-->
+
+        <!--<tr>-->
+          <!--<td><%#= model_class.human_attribute_name(:chain_name) %></td>-->
+          <!--<td><%#= @franchise.chain_name %></td>-->
+        <!--<tr>-->
+
+        <tr>
+          <td><%= model_class.human_attribute_name(:created_at) %></td>
+          <td><%= (@franchise.created_at).strftime('%a, %d %B, %Y') %></td>
+        </tr>
+
+        <tr>
+          <td>
+            <%#= link_to t('.show', :default => t('helpers.links.show')),
+                        admin_franchise_path(@franchise), :class => 'btn btn-sm btn-default' %>
+            <%#= link_to t('.edit', :default => t('helpers.links.edit')),
+                        edit_admin_franchise_path(@franchise), :class => 'btn btn-sm btn-warning' %>
+            <%#= link_to t('.destroy', :default => t('helpers.links.destroy')),
+                        admin_franchise_path(@franchise),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t('helpers.links.confirm', :default => 'Are you sure?')) },
+                        :class => 'btn btn-sm btn-danger' %>
+          </td>
+        </tr>
+
+        </tbody></table>
+    </div>
+    <!-- /.box-body -->
+  </div>
+
+
+  <!-- /.box -->
+</div>
+

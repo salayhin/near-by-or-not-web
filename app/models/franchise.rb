@@ -3,6 +3,8 @@ class Franchise < ApplicationRecord
 
   has_many :franchise_locations
 
+  mount_uploader :logo, FranchiseLogoUploader
+
   def self.find_franchise(name)
     franchise = Franchise.find_by_name(name)
     if franchise.present?

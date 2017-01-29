@@ -8,7 +8,7 @@ class Admin::FranchisesController < ApplicationController
 
 
   def index
-    @franchises = Franchise.paginate(:page => params[:page])
+    @franchises = Franchise.order('id ASC').paginate(:page => params[:page])
   end
 
 
@@ -34,7 +34,7 @@ class Admin::FranchisesController < ApplicationController
 
     respond_to do |format|
       if @franchise.save
-        format.html { redirect_to admin_franchises_path, notice: 'FranchiseLocation was successfully created.' }
+        format.html { redirect_to admin_franchises_path, notice: 'Franchise was successfully created.' }
       else
         format.html { render :new }
       end
@@ -44,7 +44,7 @@ class Admin::FranchisesController < ApplicationController
   def update
     respond_to do |format|
       if @franchise.update(admin_franchise_params)
-        format.html { redirect_to admin_franchise__path, notice: 'FranchiseLocation was successfully updated.' }
+        format.html { redirect_to admin_franchise_path, notice: 'Franchise was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -54,19 +54,19 @@ class Admin::FranchisesController < ApplicationController
   def destroy
     @franchise.destroy
     respond_to do |format|
-      format.html { redirect_to admin_franchise_path, notice: 'FranchiseLocation was successfully destroyed.' }
+      format.html { redirect_to admin_franchise_path, notice: 'Franchise was successfully destroyed.' }
     end
   end
 
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_admin_franchise
-    @franchise = FranchiseLocation.find(params[:id])
+    @franchise = Franchise.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_franchise_params
-    params.require(:franchise).permit(:name, :factual_id, :rank, )
+    params.require(:franchise).permit(:name, :rank, :is_client, :website, :logo)
   end
 end
 

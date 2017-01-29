@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :users
     get 'franchise_locations/search' => 'franchise_locations#search'
     post 'franchise_locations/search' => 'franchise_locations#search'
+    resources :franchises
     resources :franchise_locations
   end
 

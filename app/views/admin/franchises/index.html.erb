@@ -35,13 +35,12 @@
         <tbody><tr>
           <th><%= model_class.human_attribute_name(:id) %></th>
           <th><%= model_class.human_attribute_name(:name) %></th>
-          <th><%= model_class.human_attribute_name(:factual_id) %></th>
           <th><%= model_class.human_attribute_name(:rank) %></th>
           <th><%= model_class.human_attribute_name(:is_client) %></th>
           <th><%= model_class.human_attribute_name(:website) %></th>
           <th><%= model_class.human_attribute_name(:logo) %></th>
-          <th><%= model_class.human_attribute_name(:category_labels) %></th>
-          <th><%= model_class.human_attribute_name(:chain_name) %></th>
+          <th><%#= model_class.human_attribute_name(:category_labels) %></th>
+          <th><%#= model_class.human_attribute_name(:chain_name) %></th>
           <th><%#= model_class.human_attribute_name(:created_at) %></th>
           <th><%=t '.actions', :default => t('helpers.actions') %></th>
         </tr>
@@ -50,18 +49,17 @@
             <tr>
               <td><%= link_to franchise.id,  admin_franchise_path(franchise) %></td>
               <td><%= franchise.name %></td>
-              <td><%= franchise.factual_id %></td>
               <td><%= franchise.rank %></td>
-              <td><%= franchise.is_client %></td>
-              <td><%= franchise.website %></td>
-              <td><%= franchise.logo %></td>
-              <td><%= franchise.category_labels %></td>
-              <td><%= franchise.chain_name %></td>
+              <td><span class="label label-<%= (franchise.is_client  ? 'success' : 'warning') %>"><%= (franchise.is_client  ? 'Yes' : 'No') %></span> </td>
+              <td><%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : '' %></td>
+              <td><%= image_tag franchise.logo.present? ? franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{franchise.name}" %></td>
+              <td><%#= franchise.category_labels %></td>
+              <td><%#= franchise.chain_name %></td>
               <td><%#= (franchise.created_at).strftime('%a, %d %B, %Y') %></td>
               <td>
                 <%= link_to t('.show', :default => t('helpers.links.show')),
                             admin_franchise_path(franchise), :class => 'btn btn-sm btn-success' %>
-                <%#= link_to t('.edit', :default => t('helpers.links.edit')),
+                <%= link_to t('.edit', :default => t('helpers.links.edit')),
                             edit_admin_franchise_path(franchise), :class => 'btn btn-sm btn-warning' %>
                 <%#= link_to t('.destroy', :default => t('helpers.links.destroy')),
                             admin_franchise_path(franchise),

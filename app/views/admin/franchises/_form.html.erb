@@ -1,0 +1,68 @@
+
+<%= form_for [:admin, @franchise], :html => {class: 'form-horizontal user'} do |f| %>
+    <div class="box-body resize">
+      <% if @franchise.errors.any? %>
+          <div id="error_expl" class="panel panel-danger">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%= pluralize(@franchise.errors.count, 'error') %> prohibited this user from being
+                saved:</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <% @franchise.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+      <% end %>
+
+
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, :class => 'form-control', :id => 'name', :placeholder => 'Enter Name' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :rank %>
+        <%= f.text_field :rank, :class => 'form-control', :id => 'rank', :placeholder => 'Enter Rank' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :is_client %>
+        Yes: <%= f.radio_button :is_client, true%> &nbsp;
+        No: <%= f.radio_button :is_client, false %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :website %>
+        <%= f.text_field :website, :class => 'form-control', :id => 'website', :placeholder => 'Enter Website' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :logo %>
+        <%= image_tag @franchise.logo.present? ? @franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{@franchise.name}" %>
+        <%= f.file_field :logo, :class => 'form-control', :id => 'logo' %>
+      </div>
+
+
+      <!--<div class="form-group">-->
+        <!--<%#= f.label :category_labels %>-->
+        <!--<%#= f.text_field :category_labels, :class => 'form-control', :id => 'phone_number', :placeholder => 'Enter Category Labels'  %>-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+        <!--<%#= f.label :chain_name %>-->
+        <!--<%#= f.text_field :chain_name, :class => 'form-control', :id => 'comments', :placeholder => 'Enter Chain Name'  %>-->
+      <!--</div>-->
+
+    </div>
+
+
+    <div class="box-footer">
+      <%= f.submit nil, :class => 'btn btn-sm btn-success' %>
+      <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
+                  admin_franchises_path, :class => 'btn btn-sm btn-default' %>
+    </div>
+
+<% end %>
