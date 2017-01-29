@@ -1,4 +1,4 @@
-class CreateFranchises < ActiveRecord::Migration[5.0]
+class CreateFranchiseLocations < ActiveRecord::Migration[5.0]
   def change
     create_table :franchise_locations do |t|
       t.string :factual_id

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  factual_id: MyString
+  rank: 1
+  is_client: false
+  website: MyString
+  logo: MyString
+
+two:
+  name: MyString
+  factual_id: MyString
+  rank: 1
+  is_client: false
+  website: MyString
+  logo: MyString
