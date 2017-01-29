@@ -10,7 +10,7 @@ franchise_files.each do |fr|
   csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 
   csv.each do |row|
-    city = Franchise.new
+    city = FranchiseLocation.new
     city.factual_id = row['factual_id']
     city.name = row['name']
     city.address = row['address']

@@ -1,6 +1,6 @@
 class CreateFranchises < ActiveRecord::Migration[5.0]
   def change
-    create_table :franchises do |t|
+    create_table :franchise_locations do |t|
       t.string :factual_id
       t.string :name
       t.text :address

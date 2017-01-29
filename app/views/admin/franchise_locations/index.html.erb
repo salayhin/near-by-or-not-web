@@ -1,5 +1,5 @@
 <section class="content-header header-resize">
-  <%- model_class = Franchise -%>
+  <%- model_class = FranchiseLocation -%>
   <h1>
     <%=t '.title', :default => model_class.model_name.human.pluralize.titleize %>
     <%#= link_to 'New Station',
@@ -54,7 +54,7 @@
 
         <% @franchises.each do |franchise| %>
             <tr>
-              <td><%= link_to franchise.id, admin_franchise_path(franchise) %></td>
+              <td><%= link_to franchise.id,  admin_franchise_location_path(franchise) %></td>
               <td><%#= franchise.factual_id %></td>
               <td><%= franchise.name %></td>
               <td><%= franchise.address %></td>
@@ -72,7 +72,7 @@
               <td><%#= (franchise.created_at).strftime('%a, %d %B, %Y') %></td>
               <td>
                 <%= link_to t('.show', :default => t('helpers.links.show')),
-                            admin_franchise_path(franchise), :class => 'btn btn-sm btn-success' %>
+                            admin_franchise_location_path(franchise), :class => 'btn btn-sm btn-success' %>
                 <%#= link_to t('.edit', :default => t('helpers.links.edit')),
                             edit_admin_franchise_path(franchise), :class => 'btn btn-sm btn-warning' %>
                 <%#= link_to t('.destroy', :default => t('helpers.links.destroy')),

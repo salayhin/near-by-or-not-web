@@ -16,7 +16,7 @@
         </div>
 
 
-        <%= form_tag(admin_franchises_search_path , :method => :post, :class => 'form-horizontal user') do |f| %>
+        <%= form_tag( admin_franchise_locations_search_path , :method => :post, :class => 'form-horizontal user') do |f| %>
             <div class="box-body resize">
 
               <div class="form-group">
@@ -34,7 +34,7 @@
             <div class="box-footer">
               <%= submit_tag nil, :class => 'btn btn-sm btn-success' %>
               <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
-                          admin_franchises_search_path, :class => 'btn btn-sm btn-default' %>
+                          admin_franchise_locations_search_path, :class => 'btn btn-sm btn-default' %>
             </div>
 
         <% end %>

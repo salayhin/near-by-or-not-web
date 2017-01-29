@@ -10,10 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117200820) do
+ActiveRecord::Schema.define(version: 20170129144310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "cube"
+  enable_extension "earthdistance"
 
   create_table "api_keys", force: :cascade do |t|
     t.string   "access_token"
@@ -26,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170117200820) do
     t.index ["user_id"], name: "index_api_keys_on_user_id", using: :btree
   end
 
-  create_table "franchises", force: :cascade do |t|
+  create_table "franchise_locations", force: :cascade do |t|
     t.string   "factual_id"
     t.string   "name"
     t.text     "address"

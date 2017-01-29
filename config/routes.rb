@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
     resources :users
-    get 'franchises/search' => 'franchises#search'
-    post 'franchises/search' => 'franchises#search'
-    resources :franchises
+    get 'franchise_locations/search' => 'franchise_locations#search'
+    post 'franchise_locations/search' => 'franchise_locations#search'
+    resources :franchise_locations
   end
 
   mount API::Base, at: '/'
