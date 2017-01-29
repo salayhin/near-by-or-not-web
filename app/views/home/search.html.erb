@@ -57,7 +57,7 @@
                       <p><strong>Name:</strong> &nbsp;<%= franchise.name if franchise.name.present? %></p>
                       <p><strong>Website:</strong> &nbsp;<%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'Not Found' %></p>
                     </td>
-                    <td><%= link_to(image_tag(franchise.logo.present? ?  franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{franchise.name}"), franchise.website, :target => '_blank') %></td>
+                    <td><%= link_to(image_tag( franchise.logo_url(:thumb) , alt: "#{franchise.name}"), franchise.website, :target => '_blank') if franchise.logo.present? %></td>
                   </tr>
               <% end %>
 
