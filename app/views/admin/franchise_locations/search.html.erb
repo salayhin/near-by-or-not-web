@@ -32,7 +32,7 @@
 
 
             <div class="box-footer">
-              <%= submit_tag nil, :class => 'btn btn-sm btn-success' %>
+              <%= submit_tag nil, :class => 'btn btn-sm btn-success', data: { disable_with: 'Please wait...' } %>
               <%= link_to t('.cancel', :default => t('helpers.links.cancel')),
                           admin_franchise_locations_search_path, :class => 'btn btn-sm btn-default' %>
             </div>
