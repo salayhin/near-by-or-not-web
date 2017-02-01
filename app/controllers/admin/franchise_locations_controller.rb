@@ -44,7 +44,7 @@ class Admin::FranchiseLocationsController < ApplicationController
       @nearby_franchises = FranchiseLocation.within_radius(data['lat'], data['lng'], 3000 * 0.621).distinct.pluck(:franchise_id)
 
       #not_near_by_franchises = Franchise::ALL_FRANCHISE - @nearby_franchises
-      @not_near_by_franchises = Franchise.where(:id => Franchise::ALL_FRANCHISE - @nearby_franchises).order('rank DESC') #if @nearby_franchises.present?
+      @not_near_by_franchises = Franchise.where(:id => Franchise::ALL_FRANCHISE - @nearby_franchises).order('rank ASC') #if @nearby_franchises.present?
       @search_param = data['search_param']
     end
 
