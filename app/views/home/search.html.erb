@@ -48,9 +48,9 @@
               <tbody>
               <tr>
                 <th class="table-header-row">Rank</th>
-                <th class="table-header-row">Logo</th>
-                <th class="table-header-row">Website</th>
-                <th class="table-header-row">Name</th>
+                <th class="table-header-row">Franchise Name</th>
+                <th class="table-header-row">Franchise Info</th>
+                <!--<th class="table-header-row">Name</th>-->
                 <th class="table-header-row">Description</th>
                 <th class="table-header-row">Initial Investment</th>
               </tr>
@@ -61,7 +61,7 @@
                     <td  class="table-row">#<%= franchise.rank if franchise.rank.present? %></td>
                     <td  class="table-row"><%= franchise.name if franchise.name.present? %></td>
                     <td  class="table-row"><%= link_to(image_tag( franchise.logo_url(:thumb) , alt: "#{franchise.name}"), franchise.website, :target => '_blank') if franchise.logo.present? %></td>
-                    <td  class="table-row"><%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'N/A' %></td>
+                    <!--<td  class="table-row"><%#=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'N/A' %></td>-->
                     <td  class="table-row"><%= franchise.franchise_locations[0].category_labels if franchise.franchise_locations[0].present? %></td>
                     <td  class="table-row"><%= franchise.initial_investment.present? ? franchise.initial_investment : 'N/A' %></td>
                   </tr>
