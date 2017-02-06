@@ -66,7 +66,7 @@ class Admin::FranchisesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def admin_franchise_params
-    params.require(:franchise).permit(:name, :rank, :is_client, :website, :logo)
+    params.require(:franchise).permit(:name, :rank, :is_client, :website, :logo, :initial_investment)
   end
 end
 

@@ -56,10 +56,10 @@
           <td><%= image_tag @franchise.logo.present? ? @franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{@franchise.name}" %></td>
         <tr>
 
-        <!--<tr>-->
-          <!--<td><%#= model_class.human_attribute_name(:category_labels) %></td>-->
-          <!--<td><%#= @franchise.category_labels %></td>-->
-        <!--<tr>-->
+        <tr>
+          <td><%= model_class.human_attribute_name(:initial_investment) %></td>
+          <td><%= @franchise.initial_investment.present? ? @franchise.initial_investment : 'N/A' %></td>
+        <tr>
 
         <!--<tr>-->
           <!--<td><%#= model_class.human_attribute_name(:chain_name) %></td>-->

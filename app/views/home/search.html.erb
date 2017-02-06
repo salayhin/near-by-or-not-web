@@ -1,6 +1,6 @@
 <div class="jumbotron">
-  <h1>Near by or Not</h1>
-  <p class="lead">You can find near by franchises </p>
+  <h1>Nearby or Not</h1>
+  <p class="lead">You can find nearby franchises </p>
   <!--<p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>-->
 </div>
 
@@ -44,20 +44,26 @@
           </div>
 
           <div class="box-body table-responsive no-padding">
-            <table class="table table-hover">
-              <tbody><tr>
-                <th>Franchise Name</th>
+            <table class="table table-striped">
+              <tbody>
+              <tr>
+                <th class="table-header-row">Rank</th>
+                <th class="table-header-row">Logo</th>
+                <th class="table-header-row">Website</th>
+                <th class="table-header-row">Name</th>
+                <th class="table-header-row">Description</th>
+                <th class="table-header-row">Initial Investment</th>
               </tr>
 
               <% @not_near_by_franchises.each do |franchise| %>
 
                   <tr>
-                    <td>
-                      <p><strong>Rank:</strong> &nbsp;<%= franchise.rank %></p>
-                      <p><strong>Name:</strong> &nbsp;<%= franchise.name if franchise.name.present? %></p>
-                      <p><strong>Website:</strong> &nbsp;<%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'Not Found' %></p>
-                    </td>
-                    <td><%= link_to(image_tag( franchise.logo_url(:thumb) , alt: "#{franchise.name}"), franchise.website, :target => '_blank') if franchise.logo.present? %></td>
+                    <td  class="table-row">#<%= franchise.rank if franchise.rank.present? %></td>
+                    <td  class="table-row"><%= franchise.name if franchise.name.present? %></td>
+                    <td  class="table-row"><%= link_to(image_tag( franchise.logo_url(:thumb) , alt: "#{franchise.name}"), franchise.website, :target => '_blank') if franchise.logo.present? %></td>
+                    <td  class="table-row"><%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : 'N/A' %></td>
+                    <td  class="table-row"><%= franchise.franchise_locations[0].category_labels if franchise.franchise_locations[0].present? %></td>
+                    <td  class="table-row"><%= franchise.initial_investment.present? ? franchise.initial_investment : 'N/A' %></td>
                   </tr>
               <% end %>
 

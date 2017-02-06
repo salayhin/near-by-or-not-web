@@ -33,3 +33,28 @@
     height: 400px;
     width: 100%;
 }
+
+
+
+.table-row {
+    font-size: 20px;
+}
+
+/*table.table-row tr:nth-child(even) {*/
+    /*background-color: #00c0ef;*/
+/*}*/
+
+.table>tbody>tr:nth-child(odd)>td{
+    background-color: #D2DDEF;
+}
+
+.table>tbody>tr:nth-child(even)>td{
+    background-color: #EAEEF7;
+}
+
+.table-header-row {
+    background-color: #619DD1;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
