@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
     resources :users
-    get 'franchise_locations/search' => 'franchise_locations#search'
-    post 'franchise_locations/search' => 'franchise_locations#search'
+    #get 'franchise_locations/search' => 'franchise_locations#search'
+    #post 'franchise_locations/search' => 'franchise_locations#search'
 
     resources :franchises do
       get 'all_locations' => 'franchise_locations#all_location_by_franchise_id'
