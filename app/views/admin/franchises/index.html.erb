@@ -33,17 +33,17 @@
     <div class="box-body table-responsive no-padding">
       <table class="table table-hover">
         <tbody><tr>
-          <th><%= model_class.human_attribute_name(:id) %></th>
-          <th><%= model_class.human_attribute_name(:name) %></th>
-          <th><%= model_class.human_attribute_name(:rank) %></th>
-          <th><%= model_class.human_attribute_name(:is_client) %></th>
-          <th><%= model_class.human_attribute_name(:website) %></th>
-          <th><%= model_class.human_attribute_name(:logo) %></th>
-          <th><%= model_class.human_attribute_name(:initial_investment) %></th>
-          <th><%#= model_class.human_attribute_name(:category_labels) %></th>
-          <th><%#= model_class.human_attribute_name(:chain_name) %></th>
-          <th><%#= model_class.human_attribute_name(:created_at) %></th>
-          <th><%=t '.actions', :default => t('helpers.actions') %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:id) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:name) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:rank) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:is_client) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:website) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:logo) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:initial_investment) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:category_labels) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:chain_name) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:created_at) %></th>
+          <th class="table-header-row"><%=t '.actions', :default => t('helpers.actions') %></th>
         </tr>
 
         <% @franchises.each do |franchise| %>
@@ -55,6 +55,7 @@
               <td><%=  franchise.website.present? ? (link_to franchise.name,franchise.website, :target => '_blank') : '' %></td>
               <td><%= link_to(image_tag(franchise.logo.present? ?  franchise.logo_url(:thumb) : 'http://placehold.it/200x200', alt: "#{franchise.name}"), franchise.website, :target => '_blank') %></td>
               <td><%= franchise.initial_investment.present? ? franchise.initial_investment : 'N/A' %></td>
+              <td><%#= franchise.chain_name %></td>
               <td><%#= franchise.chain_name %></td>
               <td><%#= (franchise.created_at).strftime('%a, %d %B, %Y') %></td>
               <td>

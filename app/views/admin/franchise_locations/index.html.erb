@@ -33,23 +33,23 @@
     <div class="box-body table-responsive no-padding">
       <table class="table table-hover">
         <tbody><tr>
-          <th><%= model_class.human_attribute_name(:id) %></th>
-          <th><%#= model_class.human_attribute_name(:factual_id) %></th>
-          <th><%= model_class.human_attribute_name(:name) %></th>
-          <th><%= model_class.human_attribute_name(:address) %></th>
-          <th><%= model_class.human_attribute_name(:locality) %></th>
-          <th><%= model_class.human_attribute_name(:region) %></th>
-          <th><%= model_class.human_attribute_name(:post_code) %></th>
-          <th><%= model_class.human_attribute_name(:country) %></th>
-          <th><%#= model_class.human_attribute_name(:telephone) %></th>
-          <th><%#= model_class.human_attribute_name(:website) %></th>
-          <th><%= model_class.human_attribute_name(:latitude) %></th>
-          <th><%= model_class.human_attribute_name(:longitude) %></th>
-          <th><%#= model_class.human_attribute_name(:hours_of_operations) %></th>
-          <th><%= model_class.human_attribute_name(:category_labels) %></th>
-          <th><%#= model_class.human_attribute_name(:chain_name) %></th>
-          <th><%#= model_class.human_attribute_name(:created_at) %></th>
-          <th><%=t '.actions', :default => t('helpers.actions') %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:id) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:factual_id) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:name) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:address) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:locality) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:region) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:post_code) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:country) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:telephone) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:website) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:latitude) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:longitude) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:hours_of_operations) %></th>
+          <th class="table-header-row"><%= model_class.human_attribute_name(:category_labels) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:chain_name) %></th>
+          <th class="table-header-row"><%#= model_class.human_attribute_name(:created_at) %></th>
+          <th class="table-header-row"><%=t '.actions', :default => t('helpers.actions') %></th>
         </tr>
 
         <% @franchises.each do |franchise| %>
