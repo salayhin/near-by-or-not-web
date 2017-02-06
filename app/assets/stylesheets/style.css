@@ -82,3 +82,12 @@ td{
 .table-border td{
     border: 1px solid white;
 }
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.search-button {
+    text-align: center;
+}
